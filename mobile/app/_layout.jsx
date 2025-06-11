@@ -1,5 +1,14 @@
-import { Stack } from "expo-router";
+import { Slot } from "expo-router";
+import SafeScreen from "@/components/SafeScreen";
 
 export default function RootLayout() {
-  return <Stack />;
+  
+  return (
+    <ClerkProvider>
+      <SafeScreen>
+        <Slot />
+      </SafeScreen>
+    </ClerkProvider>
+  )
 }
+ 
